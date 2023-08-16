@@ -1,0 +1,11 @@
+<h1 class="display-3">TOP restaurants</h1>
+
+<%= link_to "Add restaurant",  new_restaurant_path %>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <h2 class="display-6"><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+    <p class="list-group-item, text-decoration-none"><%= restaurant.address %></p>
+    <p class="list-group-item, text-decoration-none">Style : <%= restaurant.category %></p>
+  <% end %>
+</ul>
